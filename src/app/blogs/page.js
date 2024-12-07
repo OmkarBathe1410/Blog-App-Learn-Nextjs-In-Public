@@ -3,7 +3,7 @@ import React from "react";
 
 async function fetchListOfBlogs() {
   try {
-    const apiResponse = await fetch("http://localhost:3000/api/get-blogs", {
+    const apiResponse = await fetch(process.env.GET_BLOGS_URL, {
       method: "GET",
       cache: "no-store",
     });

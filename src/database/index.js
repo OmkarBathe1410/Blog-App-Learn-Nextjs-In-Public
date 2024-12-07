@@ -1,8 +1,7 @@
 import mongoose from "mongoose";
 
 const connectToDB = async () => {
-  const connectionUrl =
-    "mongodb+srv://omibathe:FogHPz6Eb8V1t89e@nextjsblogapp.ub84w.mongodb.net/";
+  const connectionUrl = process.env.DB_URL || '';
 
   mongoose
     .connect(connectionUrl)
